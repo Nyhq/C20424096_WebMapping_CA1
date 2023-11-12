@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-7=i25c&rb7=34j%ep^_r)ij$dd!#d+7gbo&^tpy^9)n5nc3b8+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['seanbreen.eu', 'localhost', '127.0.0.1', 'www.seanbreen.eu', '100.25.9.0']
 
@@ -30,7 +30,7 @@ CSRF_TRUSTED_ORIGINS = ['https://seanbreen.eu', 'https://www.seanbreen.eu']
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-SECURE_SSL_REDIRECT = False
+SECURE_SSL_REDIRECT = True
 
 # Application definition
 
@@ -85,7 +85,7 @@ DATABASES = {
         'NAME': 'dog_trails_db',
         'USER': 'Nyhq',
         'PASSWORD': 'Libra123@',
-        'HOST': 'localhost',  # Or the name of your Docker PostgreSQL container
+        'HOST': 'db',  
         'PORT': '5432',
     }
 }
